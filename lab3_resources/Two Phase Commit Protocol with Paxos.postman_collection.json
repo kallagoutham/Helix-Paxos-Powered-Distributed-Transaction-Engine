@@ -1,0 +1,335 @@
+{
+	"info": {
+		"_postman_id": "d5c70363-8919-48f4-a517-af9f477fa55d",
+		"name": "Two Phase Commit Protocol with Paxos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26209860",
+		"_collection_link": "https://interstellar-spaceship-332993.postman.co/workspace/Cuboid-Tool~88c1b81e-5154-436a-9f49-20ddffc03c26/collection/26209860-d5c70363-8919-48f4-a517-af9f477fa55d?action=share&source=collection_link&creator=26209860"
+	},
+	"item": [
+		{
+			"name": "Get Disconnected Servers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/servers/disconnected",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"servers",
+						"disconnected"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Disconnect Servers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/servers/disconnect",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"servers",
+						"disconnect"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Primary Servers for Clusters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/servers/primary",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"servers",
+						"primary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Primary Servers for Clusters",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/servers/primary",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"servers",
+						"primary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Server Performance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/performance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"performance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Health Check Endpoint",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Paxos Prepare Phase",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/paxos/prepare",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"paxos",
+						"prepare"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Commit Phase Cross Shard",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/paxos/cross/commit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"paxos",
+						"cross",
+						"commit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Print Datastore",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/api/paxos/datastore",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"paxos",
+						"datastore"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Paxos Balances",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"BallotNumber\":1,\r\n    \"transactions\":[]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/paxos/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"paxos",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sync Databases",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/paxos/sync",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"paxos",
+						"sync"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Commit ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/paxos/commit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"paxos",
+						"commit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accept Phase",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/paxos/accept",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"paxos",
+						"accept"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cross Shard Transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/bank/cross/transaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"bank",
+						"cross",
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IntraShard Transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/bank/transaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"bank",
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
