@@ -73,8 +73,8 @@ Transactions across multiple shards use the **Two-Phase Commit (2PC) protocol**:
 The system uses a **3-shard architecture** with **3 servers per shard**:
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                    Distributed Banking System                │
+┌─────────────────────────────────────────┐
+│ Distributed Banking System              │
 ├─────────────┬─────────────┬─────────────┐
 │  Cluster 1  │  Cluster 2  │  Cluster 3  │
 │  (Shard D1) │  (Shard D2) │  (Shard D3) │
